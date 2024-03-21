@@ -40,8 +40,12 @@
 
 ### :book: Contents
 1. [Database](#1-database)
+2. [DataStructure](#2-datastructure)
 ---
 
 ## 1. Database
 :arrow_forward: [질문](/Database/README.md)
+
+## 2. DataStructure
+:arrow_forward: [질문](/DataStructure/README.md)
 
