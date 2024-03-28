@@ -41,6 +41,7 @@
 ### :book: Contents
 1. [Database](#1-database)
 2. [DataStructure](#2-datastructure)
+3. [Algorithm](#3-algorithm)
 ---
 
 ## 1. Database
@@ -48,4 +49,7 @@
 
 ## 2. DataStructure
 :arrow_forward: [질문](/DataStructure/README.md)
+
+## 3. Algorithm
+:arrow_forward: [질문](/Algorithm/README.md)
 
