@@ -1,4 +1,4 @@
-블로그 링크: 
+블로그 링크: https://no-delay.tistory.com/43
 
 1\. 동적 계획법(DP)에 대해 설명해주세요.
 
@@ -65,7 +65,8 @@ DP를 적용하기 위해서는 2가지 조건을 만족해야 합니다.
 
 특징은 최악의 실행 시간을 표기한다는 것 입니다. 또한 시간복잡도에 영향이 적은 것은 배제하고 표기합니다.(상수, 계수, 최고차항만 표기)
 
-[##_Image|kage@bdYQRM/btsGrWi17jV/Er0r0ewC5RNVLPZqszvotk/img.png|CDM|1.3|{"originWidth":638,"originHeight":479,"style":"alignLeft","width":412,"height":309}_##]
+![image](https://github.com/SsafyStudy13/CS_Study/assets/57094856/86fb353a-cc1e-40fb-a139-bf1c52ce9fe1)
+
 
 성능 순서: O(1) < O(log N) < O(N) < O(N log N) < O(N^2) < O(2^N)
 
@@ -178,7 +179,8 @@ MST는 최소 스패닝 트리로 그래프에서 그래프의 모든 정점�
 
 12\. 알고 있는 정렬 알고리즘에 대해 설명해주시고 비교해서 어떤 차이가 있는지 설명해주세요.
 
-[##_Image|kage@dn5MLd/btsGuufhKcu/szXwkIN2AsoKTX2Y9vdtmk/img.png|CDM|1.3|{"originWidth":698,"originHeight":299,"style":"alignLeft","width":581,"height":249}_##]
+![image](https://github.com/SsafyStudy13/CS_Study/assets/57094856/7d71850a-8ab9-4e32-b156-a665d3939272)
+
 
 삽입정렬: 앞에서부터 차례대로 이미 정렬된 부분과 비교하여 교환하는 방식
 
