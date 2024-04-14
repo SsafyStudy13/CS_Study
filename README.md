@@ -42,6 +42,7 @@
 1. [Database](#1-database)
 2. [DataStructure](#2-datastructure)
 3. [Algorithm](#3-algorithm)
+4. [Java](#4-java)
 ---
 
 ## 1. Database
@@ -52,4 +53,7 @@
 
 ## 3. Algorithm
 :arrow_forward: [질문](/Algorithm/README.md)
+
+## 4. Java
+:arrow_forward: [질문](/Java/README.md)
 
