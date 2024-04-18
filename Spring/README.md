@@ -7,3 +7,6 @@
 7. Spring MVC의 동작방식에 대해 설명해주세요. (김은솔)
 8. DispatcherServlet에 대해 설명해주세요. (김은솔)
 9. DTO를 사용한 이유를 말해주세요. (김은솔)
+10. HTTP API와 REST API에 대해서 설명해주세요. (송채은)
+11. annotation 이란 무엇인지, 어떤 것들이 있는지 설명해주세요. (송채은)
+12. singleton pattern 에 대해 설명해주세요. (송채은)
