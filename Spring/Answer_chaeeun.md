@@ -10,9 +10,7 @@
 
   : POJO는 특정 인터페이스를 구현하거나 특정 클래스를 상속받지 않아도 되며, 테스트하기 쉽고 재사용성이 높은 코드 작성에 용이
 
-- **AOP(Aspect-Oriented Programming, 관점 중심 프로그래밍)**
-
-  : AOP는 관점 지향 프로그래밍을 의미
+- **AOP(Aspect-Oriented Programming, 관점 지향 프로그래밍)**
 
   : 횡단 관심사(cross-cutting concern)를 모듈화하여 코드의 중복을 줄이고 관리하기 쉽도록 도와줌
 
@@ -127,17 +125,19 @@
 
    
 
-3. **어노테이션 기반 설정 방식**
+3. **Java 기반 설정 방식**
 
-   : `@Component`, `@Service`, `@Repository`, `@Controller` 등의 어노테이션을 사용하여 빈을 자동으로 스캔하고 등록
+   : 설정 클래스 Config.java 파일을 생성한 뒤 `@Configuration` 을 클래스 선언부에 추가
 
-   : `@Autowired` 어노테이션을 사용하여 의존성 주입
+   : 내부에 속한 메서드에 `@Bean` 어노테이션을 붙여 빈 등록
 
    ```java
-   @Component
-   public class UserService {
-       @Autowired
-       private UserRepository userRepository;
+   @Configuration
+   public class ApplicationConfig {
+       @Bean
+       public UserRepository userRepository() {
+           return new UserRepository();
+       }
    }
    ```
 
@@ -208,8 +208,8 @@
 : Filter 인터페이스 구현 메서드
 
  	1. init : 필터 객체를 초기화하고 서비스에 추가하기 위한 메서드
-	1. doFilter : HTTP 요청이 디스패처 서블릿으로 전달되기 전에 웹 컨테이너에서 실행되는 메서드
-	1. destroy : 필터 객체를 서비스에서 제거하고 사용하는 자원을 반환하기 위한 메서드
+ 	1. doFilter : HTTP 요청이 디스패처 서블릿으로 전달되기 전에 웹 컨테이너에서 실행되는 메서드
+ 	1. destroy : 필터 객체를 서비스에서 제거하고 사용하는 자원을 반환하기 위한 메서드
 
 ### Interceptor
 
@@ -221,7 +221,7 @@
 
 : Interceptor 인터페이스 구현 메서드
 
- 	1. preHandle : 컨트롤러가 호출되기 전에 실행되는 메서
+ 	1. preHandle : 컨트롤러가 호출되기 전에 실행되는 메서드
  	2. postHandle : 컨트롤러를 호출된 후에 실행되는 메서드
  	3. afterCompletion : 모든 뷰에서 최종 결과를 생성하는 일을 포함해 모든 작업이 완료된 후에 실행되는 메서드
 
@@ -280,11 +280,17 @@ DispatcherServlet이 클라이언트의 요청을 받음
 
 - 수행 역할
   - 클라이언트의 요청을 받아 적절한 컨트롤러에게 요청 전달
-  -  ViewResolver를 통해 뷰를 렌더링하여 응답 생성
+  - ViewResolver를 통해 뷰를 렌더링하여 응답 생성
 
 : **Front Controller**라고도 불림
 
 : `HttpServlet` 을 상속받아 사용
+
+> ### servlet, 서블릿
+>
+> : Java EE 웹 애플리케이션 개발을 위한 스펙으로 **웹 애플리케이션 서버에서 동작하는 Java 클래스**
+>
+> : 클라이언트의 요청을 처리하고 동적 웹 콘텐츠 생성에 사용됨
 
 </br>
 
@@ -292,7 +298,7 @@ DispatcherServlet이 클라이언트의 요청을 받음
 
 : 계층 간 데이터 교환을 위해 사용되는 객체
 
-: 주로 서비스 계층과 뷰 계층 간의 데이터 전달에 사용
+: 주로 **서비스 계층과 뷰 계층 간의 데이터 전달**에 사용
 
 → 뷰에서 필요한 데이터를 한 번에 전달하여 효율적인 통신 가능
 
@@ -316,7 +322,31 @@ DispatcherServlet이 클라이언트의 요청을 받음
 
 : HTTP 프로토콜을 통해 데이터를 주고받는 인터페이스를 제공하는 API
 
-: 주로 XML 또는 JSON 형식으로 데이터를 전송하며, SOAP 등의 프로토콜을 사용할 수도 있음 
+: 주로 XML 또는 JSON 형식으로 데이터를 전송하며, SOAP 등의 프로토콜을 사용할 수도 있음
+
+> ### HTTP(HyperText Transfer Protocol)
+>
+> : 서버-클라이언트 간 데이터를 주고 받기 위한 프로토콜
+>
+> : 인터넷에서 HyperText를 교환하기 위한 통신 귀약, 80번 포트 사용
+>
+> : Application 레벨의 프로토콜, TCP/IP 위에서 동작
+>
+> : Stateless 프로토콜
+>
+> : Method, Path, Version, Headers, Body 등으로 구성
+
+> ### HTTPS(HyperText Transfer Protocol Secure)
+>
+> : HTTP에 데이터 암호화가 추가된 프로토콜
+>
+> : 443번 포트 사용
+>
+> : 대칭키 암호화, 비대칭키 암호화 방식 사용
+
+> ### SOAP(Simple Object Access Protocol)
+>
+> : HTTP, HTTPS, SMTP를 통해 XML 기반의 데이터를 네트워크에서 교환하는 프로토콜
 
 </br>
 
@@ -330,11 +360,17 @@ DispatcherServlet이 클라이언트의 요청을 받음
 
 - **HTTP API와의 차이**
 
-  → REST API는 HTTP 프로토콜을 따르면서 아래 4가지 조건 충족 (로이 필딩 논문 기반)
+  → REST API는 HTTP 프로토콜을 따르면서 아래 4가지 조건 충족 **(로이 필딩 논문 기반)**
 
   - **자원의 식별**
 
-    : 모든 리소스는 고유한 식별자(URI)를 가짐
+    : 모든 리소스는 고유한 식별자(URI, Uniform Resource Identifier)를 가짐
+
+    ​	→ URL(Uniform Resource Locator)
+
+    ​		: 웹 주소, 네트워크 상에서 리소스가 어디 있는지 알려줌
+
+    ​		: URI의 하위개념
 
   - **메시지를 통한 리소스 조작**
 
@@ -437,7 +473,7 @@ DispatcherServlet이 클라이언트의 요청을 받음
    : static 사용 이유? 객체를 생성하지 않고 클래스 이름으로 접근하기 위함
 
    ```java
-   private static Person instatnce = new Person();
+   private static Person instance = new Person();
    ```
 
 2. 생성자를 private으로 막기
