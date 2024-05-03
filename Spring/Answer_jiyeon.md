@@ -221,7 +221,7 @@ org.springframework.web.servlet의 HandlerInterceptor 인터페이스로, 스프
 
 ### 특징
 
--   Dispatcher Servlet이 Controller를 호출하기 전 / 후에 인터셉터가 끼어들어 요청과 dmd답을 참조하거나 가공할 수 있는 기능을 제공
+-   Dispatcher Servlet이 Controller를 호출하기 전 / 후에 인터셉터가 끼어들어 요청과 응답을 참조하거나 가공할 수 있는 기능을 제공
 -   Request, Response 조작 불가능
 -   스프링 컨텍스트에서 동작
 
