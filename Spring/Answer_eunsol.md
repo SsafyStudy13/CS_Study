@@ -159,6 +159,19 @@
     10. 디스패처 서블릿은 응답할 **뷰의 렌더를 지시**하고 **뷰는 로직을 처리**
     11. 디스패처 서블릿은 **클라이언트에게 렌딩된 뷰를 응답**하며 요청을 마침
 
+- 동작방식2
+  1. 클라이언트(브라우저)는 View에서 URL을 통해 요청
+  2. DispatcherServlet은 요청을 받음
+  3. DispatcherServlet은 HandlerMapping에게 요청된 url을 전송함
+  4. HandlerMapping은 해당 요청을 매핑한 Controller가 있는지 검색, 있으면 호출해야 하는 Controller의 메소드(Handler) 정보를 DispatcherServlet에게 리턴
+  5. DispatcherServlet은 HandlerAdapter 객체를 호출
+  6. HandlerAdapter객체는 HandlerMapping이 찾은 Handler(Controller의 메소드)를 직접 실행
+  7. Controller의 메소드는 Service, DAO, DB를 거쳐 비즈니스 로직을 수행(실질적인 비즈니스 로직 수행은 Service가 함), View의 논리적인 이름만 리턴하고 역할 끝
+  8. HandlerAdapter는 View name을 받고 DispatcherServlet에게 전달
+  9. DispatcherServlet은 ViewResolver에게 View name 전달
+  10. View Resolver는 View name에 맞는 View를 찾고 객체를 생성하고 내용을 생성함.
+  11. View를 통해 클라이언트는 처리결과를 받음.
+
 ### 8. DispatcherServlet에 대해 설명해주세요. (김은솔)
 
 - 디스패처 서블릿
