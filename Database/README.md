@@ -1,4 +1,4 @@
-# 1. Database
+# Database
 
 ## Question
 
