@@ -1,4 +1,4 @@
-# 1. Network
+# Network
 
 ## Question
 1. HTTP Method와 각각 사용되는 경우를 설명해주세요. (김은솔)
