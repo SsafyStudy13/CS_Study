@@ -1,4 +1,4 @@
-# 2. Data Structure
+# Data Structure
 ## Question
 
 1. 스택과 큐의 차이점을 설명해주세요. (김은솔)
