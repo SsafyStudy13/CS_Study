@@ -69,12 +69,7 @@ DELETE : 리소스를 제거할 때 사용
     \=> JWE를 통해 암호화 하거나, payload에 중요한 데이터를 넣지 않아야 한다.
 
 jwt 어디에 저장해야될까?
-
- [JWT는 어디에 저장해야할까? - localStorage vs cookie
-
-이번에 지하철 미션을 만들면서 JWT를 클래스 property에 저장했었는데 리뷰어 분께 해당 부분을 피드백 받으면서 어디에 JWT를 저장하는 것이 좋을까 에 대해 고민해보게 되었다. 0. 기본 지식 JWT Js
-
-velog.io](https://velog.io/@0307kwon/JWT%EB%8A%94-%EC%96%B4%EB%94%94%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C-localStorage-vs-cookie)
+https://velog.io/@0307kwon/JWT%EB%8A%94-%EC%96%B4%EB%94%94%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C-localStorage-vs-cookie)
 
 ## 쿠키와 세션의 차이를 설명해주세요.
 
@@ -85,11 +80,7 @@ velog.io](https://velog.io/@0307kwon/JWT%EB%8A%94-%EC%96%B4%EB%94%94%EC%97%90-%E
 
 쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request 시에 Request Header를 넣어서 자동으로 서버에 전송
 
- [Cookie🍪
-
-HTTP Cookie🍪 Server에서 사용자의 컴퓨터(Client)에 저장하는 정보 파일 사용자가 별도의 요청을 하지 않아도 Browser는 request시 Request Header를 넣어 자동으로 Server에 전송 key와 value로 구성되고 String 형
-
-no-delay.tistory.com](https://no-delay.tistory.com/5#Cookie%EC%99%80%20Session%EC%9D%B4%20%ED%95%84%EC%9A%94%ED%95%9C%20%EC%9D%B4%EC%9C%A0-1)
+https://no-delay.tistory.com/5#Cookie%EC%99%80%20Session%EC%9D%B4%20%ED%95%84%EC%9A%94%ED%95%9C%20%EC%9D%B4%EC%9C%A0-1)
 
 ### Session
 
