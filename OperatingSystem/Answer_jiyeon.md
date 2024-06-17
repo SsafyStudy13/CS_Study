@@ -85,6 +85,24 @@ deadlock이 일어나지 않는다고 생각하고 아무런 조치도 취
 
 [https://spurious-astronomy-3a1.notion.site/Deadlock-beb69b2e314b4bc1a8e180715044a150?pvs=4](https://spurious-astronomy-3a1.notion.site/Deadlock-beb69b2e314b4bc1a8e180715044a150?pvs=4)
 
+## 10. 세마포어와 뮤텍스의 차이에 대해 설명해주세요.
+**뮤텍스(mutex)**
+
+임계 구역에 1개의 스레드만 들어갈 수 있는 동기화 기법
+
+**세마포어(semaphore)**
+
+임계 구역에 여러 스레드가 들어갈 수 있고, counter를 두어서 허용 가능한 스레드를 제한하는 기법
+
+|  | Semaphore | Mutex |
+| --- | --- | --- |
+| 개수 | N개 | 하나 |
+| 변화 | Mutex로 변경 가능 | Semaphore로 변경 불가능 |
+| 소유 | X | O |
+| 해제 | Semaphore를 가지지 않은 스레드도 해제 가능 | Mutex를 소유한 스레드만 해제 가능 |
+| 함수 | wait | lock |
+|  | signal | unlock |
+
 ## 11. 메모리 계층구조에 대해 설명해주세요.
 메모리 계층 구조는 레지스터, 캐시, 메모리, 디스크로 구성되어있습니다.
 
